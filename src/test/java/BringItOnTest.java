@@ -26,7 +26,7 @@ public class BringItOnTest {
 
   @Test
   public void checkIfSyntaxIsHighlighted() {
-
+    Assert.assertEquals(Selenide.$(By.xpath("//div[@class = 'left']/a")).getValue(), "Bash");
   }
 
   @Test
