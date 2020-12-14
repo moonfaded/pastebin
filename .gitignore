@@ -1,4 +1,7 @@
 *.class
 *.iml
+*.log
+*.png
+*.html
 .idea
 target
