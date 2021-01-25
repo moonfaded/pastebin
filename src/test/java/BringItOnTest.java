@@ -6,13 +6,13 @@ import org.testng.annotations.Test;
 
 public class BringItOnTest {
 
-  private static final String PASTE_NAME = "how to gain dominance among developers";
-  private static final String PASTE_CODE = "git config --global user.name  \"New Sheriff in Town\"\n"
+  private final String PASTE_NAME = "how to gain dominance among developers";
+  private final String PASTE_CODE = "git config --global user.name  \"New Sheriff in Town\"\n"
           + "git reset $(git commit-tree HEAD^{tree} -m \"Legacy code\")\n"
           + "git push origin master --force";
 
   @BeforeClass
-  public static void bringItOn() {
+  public void bringItOn() {
     Selenide.open("https://pastebin.com");
     Selenide.$(By.id("postform-text")).sendKeys(PASTE_CODE);
     Selenide.$(By.id("select2-postform-format-container")).click();
